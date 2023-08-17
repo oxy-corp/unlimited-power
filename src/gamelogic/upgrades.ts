@@ -209,7 +209,7 @@ export const PowerBoosts = [
       'Increases money per click.', // description
       100_000, // base price
       2, // multiplier
-      null, // going to be lazy here and use null to describe clicking the button, for others it will be the id
+      5, // going to be lazy here and use null to describe clicking the button, for others it will be the id
    )
 ];
 
