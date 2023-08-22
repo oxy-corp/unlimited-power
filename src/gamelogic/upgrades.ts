@@ -166,52 +166,60 @@ export const generators = [
       1.4,
       3,
       10
-   )
+   ),
+   new Generator(
+      5,
+      'Auto Clicker Buyer Buyer Buyer Buyer',
+      'Automatically buys an auto clikcer buyer buyer buyer every 10 seconds',
+      500_000,
+      1.5,
+      5,
+      10
 ];
 
 /**
  * Class to define how a powerBoost upgrade behaves.
  * Extends Upgrade, meaning it inherits all of the properties and functions.
  */
-export class powerBoost extends Upgrade {
-   // id of the upgrade this one generates
-   public powerId: number;
+// export class powerBoost extends Upgrade {
+//    // id of the upgrade this one generates
+//    public powerId: number;
 
-   constructor(id: number, name: string, description: string, basePrice: number, multiplier: number, powerId: number) {
-      super(id, name, description, basePrice, multiplier);
-      this.powerId = powerId;
-   }
+//    constructor(id: number, name: string, description: string, basePrice: number, multiplier: number, powerId: number) {
+//       super(id, name, description, basePrice, multiplier);
+//       this.powerId = powerId;
+//    }
 
-   /**
-    * Update this generator and generate some stuff!
-    * @param deltaT Time in seconds since last update
-    */
-   update(deltaT: number) {
+//    /**
+//     * Update this generator and generate some stuff!
+//     * @param deltaT Time in seconds since last update
+//     */
+//    update(deltaT: number) {
 
-      // only do something if we have 1 or more of these
-      const count = this.getTotalCount();
-      if (count > 0) {
-            setButtonClick(count) // increases money gained on click by purchase count
+//       // only do something if we have 1 or more of these
+//       const count = this.getTotalCount();
+//       if (count > 0) {
+//             setButtonClick(count) // increases money gained on click by purchase count
 
-            // update the svelte store
-            updateGameModel();
-         }
-      }
-   }
+//             // update the svelte store
+//             updateGameModel();
+//          }
+//       }
+//    }
 
-/**
- * List of clickBoosts that can be bought
- */
-export const PowerBoosts = [
-   new powerBoost(
-      5, // id
-      'Refinery Plant', // name
-      'Increases money per click.', // description
-      100_000, // base price
-      2, // multiplier
-      5, // going to be lazy here and use null to describe clicking the button, for others it will be the id
-   )
-];
+// /**
+//  * List of clickBoosts that can be bought
+//  */
+// export const PowerBoosts = [
+//    new powerBoost(
+//       5, // id
+//       'Refinery Plant', // name
+//       'Increases money per click.', // description
+//       100_000, // base price
+//       2, // multiplier
+//       5, // going to be lazy here and use null to describe clicking the button, for others it will be the id
+//    )
+// ];
 
 
 
@@ -228,10 +236,10 @@ export const PowerBoosts = [
       }
       ids[e.id] = true;
    })
-   PowerBoosts.forEach(e => {
-      if (ids[e.id]) {
-         alert(`PowerBoost id: ${e.id} has been used more than once. All upgrade ids must be unique!`);
-      }
-      ids[e.id] = true;
-   })
-})();
+//    PowerBoosts.forEach(e => {
+//       if (ids[e.id]) {
+//          alert(`PowerBoost id: ${e.id} has been used more than once. All upgrade ids must be unique!`);
+//       }
+//       ids[e.id] = true;
+//    })
+// })();
