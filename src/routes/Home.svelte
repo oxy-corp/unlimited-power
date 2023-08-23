@@ -15,9 +15,6 @@
 <div>
    <GeneratorList />
 </div>
-<div>
-   <PowerBoostList />
-</div>
 
 <style>
    div {
