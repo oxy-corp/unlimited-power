@@ -2,4 +2,4 @@
 
 # Rewritten version of [meth-clicker](https://kairu.dev/meth/main)
 
-Written by Kairu!
+Written by Condolences!
